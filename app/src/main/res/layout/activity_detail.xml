@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/iv_detail_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:maxWidth="250dp"
+        android:maxHeight="250dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_empty" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/login_border">
+    <TextView
+        android:id="@+id/tv_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:maxLines="1"
+        android:text="我是标题"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_detail_description"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:maxLines="2"
+        android:layout_marginTop="2dp"
+        android:text="商品描述"
+        android:textSize="21sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_detail_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:maxLines="1"
+        android:text="价格"
+        android:textColor="@color/red"
+        android:textSize="35sp" />
+
+</LinearLayout>
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sp_home"
+        android:text="购买"
+        android:textSize="30sp"
+        />
+
+</LinearLayout>

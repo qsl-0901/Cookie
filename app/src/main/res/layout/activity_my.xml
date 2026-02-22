@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    tools:context=".activity.MyActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#E0FFFF"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_picture" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:text="小鱼"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightGreen"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintBottom_toTopOf="@+id/ll_end"
+        app:layout_constraintTop_toBottomOf="@+id/ll_user">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/sp_my"
+            android:gravity="start|center_vertical"
+            android:text="我买到的"
+            android:textSize="30sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/sp_my"
+            android:gravity="start|center_vertical"
+            android:text="我上架的"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/sp_home"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="退出登录"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="有问题请联系心理援助热线(点击拨号）    4001619995" />
+    </LinearLayout>
+
+    <!--底部导航栏-->
+    <LinearLayout
+        android:id="@+id/ll_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightGreen"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btu_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sp_home"
+            android:text="首页"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/btu_add"
+            android:layout_width="63dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_add" />
+
+        <Button
+            android:id="@+id/btu_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sp_home"
+            android:text="我的"
+            android:textSize="19sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
