@@ -1,5 +1,3 @@
-
-
 package com.example.myapplication.activity;
 
 import android.content.Intent;
@@ -43,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         et_name = findViewById(R.id.et_name);
         btu_login = findViewById(R.id.btu_login);
         cb_remember = findViewById(R.id.cb_remember);
-        pref = PreferenceManager.getDefaultSharedPreferences(this);//不知道 反正书上是这么写的
+        pref = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isRemember = pref.getBoolean("remember_password", false);
         //勾选了记住密码就把数据填入
         if (isRemember) {
